@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="以下を記入してください"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:typeface="monospace"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="デバイスID"
+                    android:textAlignment="center"
+                    android:textSize="20dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/MyValidationTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    >
+
+                    <com.vegitables.customview.ValidationEditText
+                        android:id="@+id/etId"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/border"
+                        android:hint="デバイスのIdを入力してください"
+                        android:inputType="text|number"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="氏名"
+                    android:textAlignment="center"
+                    android:textSize="20dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/MyValidationTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    >
+
+                    <com.vegitables.customview.ValidationEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/border"
+                        android:hint="名前を入力してください"
+                        android:inputType="text"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="年齢"
+                    android:textAlignment="center"
+                    android:textSize="20dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/MyValidationTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    >
+
+                    <com.vegitables.customview.ValidationEditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border"
+                        android:hint="年齢を入力してください"
+                        android:inputType="number"
+                        android:textAlignment="inherit"
+                        />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="性別"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/rgSex"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbMen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="男"/>
+
+                    <RadioButton
+                        android:id="@+id/rbWomen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="女"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="利き手"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/rgHandedness"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="右手"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="左手"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="スマートフォン歴(年)"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/MyValidationTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    >
+
+                    <com.vegitables.customview.ValidationEditText
+                        android:id="@+id/etCareer"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border"
+                        android:hint="スマートフォンの使用歴を入力してください"
+                        android:inputType="number"
+                        android:textAlignment="inherit"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="スマートフォンの1日の使用時間(時)"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/MyValidationTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    >
+
+                    <com.vegitables.customview.ValidationEditText
+                        android:id="@+id/etUsage"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border"
+                        android:hint="スマートフォンの1日の使用時間を入力してください"
+                        android:inputType="number"
+                        android:textAlignment="inherit"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabSave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_weight="0.3"
+                android:clickable="true"
+                app:fabSize="normal"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="次へすすむ"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
